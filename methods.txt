@@ -1,0 +1,6 @@
+coin-gecko API:
+
+npm packages:
+    - react-router-dom
+    - axios
+    - 
