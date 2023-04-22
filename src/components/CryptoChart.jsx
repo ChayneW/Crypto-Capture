@@ -41,7 +41,7 @@ const CryptoChart = ({coin}) => {
 
     const fetchData = async (coin) => {
         console.log('inside fetchData:')
-        await console.log(coin?.id, days)
+        // await console.log(coin?.id, days)
         const {data} = await axios.get(url)
         setHistoryData(data?.prices)
     }

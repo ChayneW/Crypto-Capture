@@ -5,14 +5,14 @@ import CryptoDetails from '../pages/CryptoDetails'
 
 const CryptoData = ({coin, id}) => {
     console.log('inside CryptoData:')
-    console.log(coin)
+    // console.log(coin)
     const coinData = coin
 
 
-    const image = coin.image
+    const image = coin?.image
     const newImg = image.replace('large', 'small')
     coin.image = newImg
-    console.log(coin.image)
+    // console.log(coin.image)
 
     return (
         <>
@@ -21,7 +21,7 @@ const CryptoData = ({coin, id}) => {
                 <td class="whitespace-nowrap px-6 py-4 font-medium">{id + 1}</td>
                 <td class="whitespace-nowrap px-6 py-4">
                 {console.log('coinData send to coinDetails.jsx:')}
-                {console.log(coinData)}
+                {/* {console.log(coinData)} */}
                 <Link to={`/coin/${coin.id}`} element={<CryptoDetails />}>
                     <div className="flex text-center">
                             <img src={`${coin.image}`} alt={coin?.id} />

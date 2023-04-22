@@ -8,27 +8,28 @@ const ColumnData = () => {
     const [coins, setCoins] = useState([])
     const [top, setTop] = useState(10)
     console.log('useState top:')
-    console.log(top)
+    // console.log(top)
 
     console.log('columnData coins:')
-    console.log(coins)
+    // console.log(coins)
 
 
     useEffect(() => {
 
         axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${top}&page=1&sparkline=false&locale=en`).then((response) => {
-            console.log(response.data)
+            // console.log(response.data)
             setCoins(response.data)
         })
     },[top])
 
     return (
+        <>
         <div className="text-white p-10">
 
 
 
             <h1 className="text-2xl">Top Coins:</h1>
-
+            <span className="text-gray"><a href='https://www.coingecko.com/en/api/documentation'>Powered by CoinGecko API</a></span>
             <div className="text-white flex justify-between pt-4">
                 <button className="btn" onClick={() => setTop(20)}>Top 20</button>
                 <button className="btn" onClick={() => setTop(50)}>Top 50</button>
@@ -59,6 +60,7 @@ const ColumnData = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

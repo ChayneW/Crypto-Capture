@@ -29,7 +29,7 @@ const CryptoDetails = () => {
 
     useEffect(() => {
         axios.get(url).then((response) => {
-            console.log(response.data)
+            // console.log(response.data)
             setCoin(response.data)
             }).catch((error) => {
                 console.log(error)
