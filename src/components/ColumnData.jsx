@@ -29,7 +29,7 @@ const ColumnData = () => {
 
 
             <h1 className="text-2xl">Top Coins:</h1>
-            <span className="text-gray"><a href='https://www.coingecko.com/en/api/documentation'>Powered by CoinGecko API</a></span>
+            <span className="text-white"><a href='https://www.coingecko.com/en/api/documentation'>Powered by CoinGecko API</a></span>
             <div className="text-white flex justify-between pt-4">
                 <button className="btn" onClick={() => setTop(20)}>Top 20</button>
                 <button className="btn" onClick={() => setTop(50)}>Top 50</button>
